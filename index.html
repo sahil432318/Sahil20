@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0f172a, #111827);
+            color: white;
+            text-align: center;
+            scroll-behavior: smooth;
+        }
+
+        /* Header Navigation */
+        header {
+            background: rgba(31, 41, 55, 0.9);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #4ade80;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px #4ade80;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            position: relative;
+            overflow: hidden;
+            transition: color 0.4s ease;
+        }
+
+        nav ul li a::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #4ade80;
+            bottom: -4px;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        nav ul li a:hover {
+            color: #facc15;
+        }
+
+        nav ul li a:hover::before {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(145deg, #0f172a, #1e293b);
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            margin-bottom: 10px;
+            color: #0a1a0f;
+            text-shadow: 0 0 15px #4ade80, 0 0 20px #4ade80;
+        }
+
+        .hero p {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            color: #facc15;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #4ade80;
+            color: black;
+            padding: 15px 30px;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.4s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #facc15;
+            transform: scale(1.1);
+        }
+
+        /* Section Cards */
+        section {
+            padding: 80px 20px;
+        }
+
+        .card {
+            background: rgba(31, 41, 55, 0.9);
+            padding: 40px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 30px rgba(224, 139, 12, 0.3);
+            text-align: left;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        h2 {
+            border-bottom: 2px solid #4ade80;
+            display: inline-block;
+            padding-bottom: 5px;
+            color: #facc15;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e293b;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #aaa;
+        }
+
+        footer p {
+            text-align: center;
+        }
+
+        /* Fade-in effect */
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            .card {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">MyPortfolio</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Creative Developer | Web Designer | Tech Enthusiast</p>
+        <a href="#contact" class="btn">Contact Me</a>
+    </section>
+
+    <section id="about" class="card">
+          <h2>About Me</h2>
+            <p>Hi, I’m Sahil, currently pursuing Master of science in computer science (Msc.CS) from Galgotias University in Greater Noida, a passionate web developer and designer dedicated to creating seamless and innovative digital experiences. I love combining creativity with technology to build functional and visually stunning websites and applications.</p>
+            <p>With experience in web development, I specialize in HTML, CSS, JavaScript, React, and Python. I also have a solid background in backend technologies like Flask and Firebase. My goal is to craft user-centric websites that offer a flawless user experience.</p>
+            <p>I believe in continuous learning and improving my skills to stay ahead of the curve. I take an agile approach to projects, collaborating closely with clients to understand their needs and deliver solutions that not only meet but exceed expectations.</p>
+            <p>Throughout my career, I have contributed to numerous successful web applications, including an exam paper management system and a real-time chat application. I have also integrated APIs like OpenAI to create AI-driven chatbots.</p>
+            <p>Outside of coding, I’m an avid gamer and enjoy exploring virtual worlds. I’m also passionate about design and often experiment with new design trends in my spare time. I believe that a great product is a perfect blend of both functionality and aesthetics.</p>
+            <p>If you’re looking for a creative and reliable developer for your next project, feel free to reach out! Let’s build something amazing together.</p>
+
+        
+    </section>
+
+    <section id="skills" class="card">
+        <h2>Skills</h2>
+        <ul>
+            <li>Web Development (HTML, CSS, JavaScript, React)</li>
+            <li>Backend Development (Python, Flask, Firebase)</li>
+            <li>Database Management (MySQL, Firestore)</li>
+            <li>API Integration (OpenAI API, Postman)</li>
+        </ul>
+    </section>
+    
+            <h2>Projects</h2>
+            <!-- Inserting an image -->
+            <img src="path-to-your-image.jpg" alt="Project Image" width="500">
+        </section>
+    </body>
+    </html>
+    
+    <section id="projects" class="card">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Exam Paper Web App:</strong> A platform for storing and retrieving exam papers, built with Firebase, Firestore, and Cloudinary.</li>
+            <li><strong>Chat Application:</strong> A real-time chat app with frontend and backend.</li>
+            <li><strong>AI Chatbot:</strong> Built with OpenAI API for smart conversations.</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="card">
+        <h2>Contact</h2>
+        <p>Email me at <a href="mailto:your.email@example.com">yadav20sahil@gmail.com</a></p>
+        <a href="#" class="btn">LinkedIn</a>
+        <a href="#" class="btn">GitHub</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll("nav ul li a").forEach(link => {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    let targetId = this.getAttribute("href").substring(1);
+                    document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+                });
+            });
+
+            // Fade-in effect on scroll
+            const cards = document.querySelectorAll(".card");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
